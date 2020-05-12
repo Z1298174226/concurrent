@@ -8,5 +8,5 @@ message String {
 
 service PubsubService {
     rpc Publish (String) returns (String);
-    rpc Subscribe (String) returns (stream String);
+    rpc Subscribe (stream String) returns (stream String);
 }
