@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	"pubsub"
+	"github.com/Z1298174226/concurrent/src/pubsub"
 	"strings"
 	"time"
 )
