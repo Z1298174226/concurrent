@@ -23,13 +23,13 @@ func main() {
 	//}
 
 	//客户端基于CA证书进行验证
-	certificate, err := tls.LoadX509KeyPair("tls/client.crt", "tls/client.key")
+	certificate, err := tls.LoadX509KeyPair("src/grpc/tls/client.crt", "src/grpc/tls/client.key")
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	certPool := x509.NewCertPool()
-	ca, err := ioutil.ReadFile("tls/ca.crt")
+	ca, err := ioutil.ReadFile("src/grpc/tls/ca.crt")
 	if err != nil {
 		log.Fatal(err)
 	}
